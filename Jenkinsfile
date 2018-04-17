@@ -1,9 +1,8 @@
 pipeline {
-    agent any
+    agent { docker { image 'maven:3.3.3' } }
     stages {
         stage('build') {
             steps {
-            	sh '/usr/local/bin/docker info'
                 echo sh(returnStdout: true, script: 'env')
             }
         }
