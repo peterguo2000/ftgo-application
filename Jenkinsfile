@@ -6,6 +6,7 @@ pipeline {
         stage('build') {
             steps {
                 echo sh(returnStdout: true, script: 'env')
+                sh 'docker info'
             }
         }
     }
