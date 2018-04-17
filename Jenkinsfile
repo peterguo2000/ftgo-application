@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+            	docker info
                 echo sh(returnStdout: true, script: 'env')
             }
         }
