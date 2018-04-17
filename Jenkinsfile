@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'sudo /usr/local/bin/docker info'
+                echo sh(returnStdout: true, script: 'env')
             }
         }
     }
