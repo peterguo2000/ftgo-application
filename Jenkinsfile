@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'docker info'
+                sh '/usr/local/bin/docker info'
             }
         }
     }
